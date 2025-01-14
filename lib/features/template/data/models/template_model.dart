@@ -10,13 +10,13 @@ class TemplateModel extends TemplateEntity {
 
   factory TemplateModel.fromJson({required Map<String, dynamic> json}) {
     return TemplateModel(
-      template: json[kTemplate],
+      template: json[kPath],
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      kTemplate: template,
+      kPath: template,
     };
   }
 }

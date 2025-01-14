@@ -1,4 +1,4 @@
-String kTemplate = 'template';
+String kPath = 'template';
 
 String kName = 'name';
 String kId = 'id';
