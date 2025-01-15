@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -53,7 +55,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
- 
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -67,8 +69,12 @@ class _HomeState extends State<Home> {
     SelectedPokemonItemProvider selectedPokemonItem =
         Provider.of<SelectedPokemonItemProvider>(context, listen: false);
 
+    PokemonImageProvider pip =
+        Provider.of<PokemonImageProvider>(context, listen: false);
+
     Provider.of<PokemonProvider>(context, listen: false).eitherFailureOrPokemon(
       value: (selectedPokemonItem.number + 1).toString(),
+      pip: pip,
     );
     super.initState();
   }

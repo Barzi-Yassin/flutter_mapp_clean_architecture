@@ -12,4 +12,4 @@ String kFrontShiny = 'front_shiny';
 
 int maxPokemonId = 1008;
 
-bool isShiny = true;
+bool isShiny = !true;
